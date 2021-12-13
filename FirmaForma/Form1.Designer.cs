@@ -56,6 +56,7 @@ namespace FirmaForma
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(165, 20);
             this.idText.TabIndex = 0;
+            this.idText.TextChanged += new System.EventHandler(this.idText_TextChanged);
             // 
             // nazivText
             // 
@@ -160,6 +161,7 @@ namespace FirmaForma
             this.insertButton.TabIndex = 12;
             this.insertButton.Text = "Insert";
             this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
             // updateButton
             // 
@@ -178,6 +180,7 @@ namespace FirmaForma
             this.deleteButton.TabIndex = 14;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // rightButton
             // 
@@ -187,6 +190,7 @@ namespace FirmaForma
             this.rightButton.TabIndex = 15;
             this.rightButton.Text = ">";
             this.rightButton.UseVisualStyleBackColor = true;
+            this.rightButton.Click += new System.EventHandler(this.rightButton_Click);
             // 
             // leftButton
             // 
@@ -196,6 +200,7 @@ namespace FirmaForma
             this.leftButton.TabIndex = 16;
             this.leftButton.Text = "<";
             this.leftButton.UseVisualStyleBackColor = true;
+            this.leftButton.Click += new System.EventHandler(this.leftButton_Click);
             // 
             // topButton
             // 
@@ -205,6 +210,7 @@ namespace FirmaForma
             this.topButton.TabIndex = 17;
             this.topButton.Text = "<<";
             this.topButton.UseVisualStyleBackColor = true;
+            this.topButton.Click += new System.EventHandler(this.topButton_Click);
             // 
             // botButton
             // 
@@ -214,12 +220,13 @@ namespace FirmaForma
             this.botButton.TabIndex = 18;
             this.botButton.Text = ">>";
             this.botButton.UseVisualStyleBackColor = true;
+            this.botButton.Click += new System.EventHandler(this.botButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 457);
+            this.ClientSize = new System.Drawing.Size(542, 462);
             this.Controls.Add(this.botButton);
             this.Controls.Add(this.topButton);
             this.Controls.Add(this.leftButton);

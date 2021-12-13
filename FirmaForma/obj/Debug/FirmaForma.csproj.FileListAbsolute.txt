@@ -1,0 +1,10 @@
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\bin\Debug\FirmaForma.exe.config
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\bin\Debug\FirmaForma.exe
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\bin\Debug\FirmaForma.pdb
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.csproj.AssemblyReference.cache
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.Form1.resources
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.Properties.Resources.resources
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.csproj.GenerateResource.cache
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.csproj.CoreCompileInputs.cache
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.exe
+D:\1Pavle Back-up\1PavleSkolskiRad\Baze\Domaci\Domaci\FirmaForma\obj\Debug\FirmaForma.pdb

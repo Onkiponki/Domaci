@@ -1,13 +1,16 @@
 create database Firma
 use Firma
-
+drop table firma
 create table firma(
-	id int identity(1,1),
-	naziv varchar(30),
-	pib varchar(30),
-	adresa varchar(30),
-	email varchar(30),
-	tekRacun varchar(30)
+	id int identity(0,1),
+	naziv nvarchar(30),
+	pib nvarchar(30),
+	adresa nvarchar(30),
+	email nvarchar(30),
+	tekRacun nvarchar(30)
 )
 insert into firma
-values('Nestle','12345678','Aksentija Topalovica 1','nestle@gmail.com','12345678')
+values('Nestle','12345678','Aksentija Topalovica 1','nestle@gmail.com','12345678'),
+('Frikom','12321','asdsadsa','1231','141124'),
+('Igor','12321','asdsadsa','1231','141124')
+
