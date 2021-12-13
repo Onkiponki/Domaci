@@ -94,6 +94,37 @@ namespace FirmaForma
             sacredRefresh();
         }
 
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            
+            veza = new SqlConnection(cs);
+            naziv = nazivText.Text;
+            pib = pibText.Text;
+            adresa = adresaText.Text;
+            email = emailText.Text;
+            tekracun = tekracunText.Text;
+            if (naziv == "" && pib == "" && adresa == "" && email == "" && tekracun == "")
+                MessageBox.Show("Unesite makar jedan podatak za updateovanje");
+            veza.Open();
+            SqlCommand naredba = new SqlCommand(String.Format("update firma set naziv = '{0}', pib = '{1}', adresa = '{2}', email = '{3}', tekRacun = '{4}' where id = {5}", naziv, pib, adresa, email, tekracun, idText.Text), veza);
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            podaci.Clear();
+            adapter = new SqlDataAdapter("select * from firma", veza);
+            adapter.Fill(podaci);
+            sacredRefresh();
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            nazivText.Text = "";
+            pibText.Text = "";
+            adresaText.Text = "";
+            emailText.Text = "";
+            tekracunText.Text = "";
+        }
+
         private void leftButton_Click(object sender, EventArgs e)
         {
             if (gde - 1 >= 0)
@@ -105,12 +136,14 @@ namespace FirmaForma
 
         private void botButton_Click(object sender, EventArgs e)
         {
-
+            gde = podaci.Rows.Count-1;
+            sacredRefresh();
         }
 
         private void topButton_Click(object sender, EventArgs e)
         {
-
+            gde = 0;
+            sacredRefresh();
         }
 
         private void insertButton_Click(object sender, EventArgs e)
@@ -131,8 +164,6 @@ namespace FirmaForma
             adapter.Fill(podaci);
             gde = podaci.Rows.Count-1;
             sacredRefresh();
-            MessageBox.Show(gde.ToString());
-            
         }
     }
 }

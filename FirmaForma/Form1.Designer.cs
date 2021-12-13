@@ -48,6 +48,7 @@ namespace FirmaForma
             this.leftButton = new System.Windows.Forms.Button();
             this.topButton = new System.Windows.Forms.Button();
             this.botButton = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // idText
@@ -171,6 +172,7 @@ namespace FirmaForma
             this.updateButton.TabIndex = 13;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // deleteButton
             // 
@@ -222,11 +224,22 @@ namespace FirmaForma
             this.botButton.UseVisualStyleBackColor = true;
             this.botButton.Click += new System.EventHandler(this.botButton_Click);
             // 
+            // Clear
+            // 
+            this.Clear.Location = new System.Drawing.Point(359, 238);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(75, 40);
+            this.Clear.TabIndex = 19;
+            this.Clear.Text = "Brisanje Polja";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 462);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.botButton);
             this.Controls.Add(this.topButton);
             this.Controls.Add(this.leftButton);
@@ -275,6 +288,7 @@ namespace FirmaForma
         private System.Windows.Forms.Button leftButton;
         private System.Windows.Forms.Button topButton;
         private System.Windows.Forms.Button botButton;
+        private System.Windows.Forms.Button Clear;
     }
 }
 
