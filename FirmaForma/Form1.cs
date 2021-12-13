@@ -83,7 +83,7 @@ namespace FirmaForma
         private void deleteButton_Click(object sender, EventArgs e)
         {
             veza = new SqlConnection(cs);
-            SqlCommand naredba = new SqlCommand(String.Format("delete from firma where id={0}", idText.Text), veza);
+            SqlCommand naredba = new SqlCommand(String.Format($"delete from firma where id={idText.Text}"), veza);
             veza.Open();
             naredba.ExecuteNonQuery();
             veza.Close();
@@ -106,7 +106,7 @@ namespace FirmaForma
             if (naziv == "" && pib == "" && adresa == "" && email == "" && tekracun == "")
                 MessageBox.Show("Unesite makar jedan podatak za updateovanje");
             veza.Open();
-            SqlCommand naredba = new SqlCommand(String.Format("update firma set naziv = '{0}', pib = '{1}', adresa = '{2}', email = '{3}', tekRacun = '{4}' where id = {5}", naziv, pib, adresa, email, tekracun, idText.Text), veza);
+            SqlCommand naredba = new SqlCommand($"update firma set naziv = '{naziv}', pib = '{pib}', adresa = '{adresa}', email = '{email}', tekRacun = '{tekracun}' where id = {idText.Text}", veza);
             naredba.ExecuteNonQuery();
             veza.Close();
             podaci.Clear();
@@ -156,7 +156,7 @@ namespace FirmaForma
             tekracun = tekracunText.Text;
 
             veza.Open();
-            SqlCommand naredba = new SqlCommand(String.Format("insert into firma values('{0}','{1}','{2}','{3}','{4}')", naziv, pib, adresa, email, tekracun), veza);
+            SqlCommand naredba = new SqlCommand($"insert into firma values('{naziv}','{pib}','{adresa}','{email}','{tekracun}')", veza);
             naredba.ExecuteNonQuery();
             veza.Close();
             podaci.Clear();

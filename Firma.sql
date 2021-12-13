@@ -1,6 +1,5 @@
 create database Firma
 use Firma
-drop table firma
 create table firma(
 	id int identity(0,1),
 	naziv nvarchar(30),
